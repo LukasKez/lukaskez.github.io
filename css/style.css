@@ -10,6 +10,7 @@
 :root {
   --white: #F1FAEE;
   --blue: #1D3557;
+  --dark-blue: #192841;
   --light-blue: #457B9D;
   --cyan: #A8DADC;
   --orange: #FCDAB7;
@@ -135,15 +136,16 @@ HEADER
 ***********************************/
 
 .header {
-  background: url('../img/milky-way.jpg');
+  /* background: url('../img/milky-way.jpg'); */
+  background-color: var(--dark-blue);
   background-size: cover;
-  min-height: 650px;
+  min-height: 600px;
   position: relative;
 }
 
 .bg-color {
   background-color: rgba(0, 0, 0, 0.5);
-  min-height: 650px;
+  min-height: 600px;
 }
 
 #main-header {}
@@ -167,7 +169,7 @@ HEADER
 
 .top-nav-collapse {
   padding: 0;
-  background: rgba(64, 75, 97, 0.9);
+  background: rgba(64, 75, 97, 1);
 }
 
 .logo-dec {
@@ -287,7 +289,7 @@ features
 ************************************
 ***********************************/
 
-.title, .service-title {
+.title, .planets-title {
   font-family: 'Fira Sans', sans-serif;
   font-size: 35px;
   text-transform: uppercase;
@@ -333,16 +335,16 @@ features
   line-height: 1.7;
 }
 
-#service {
+#planets {
   background-color: #F3F4F8;
 }
 
-#service img {
+#planets img {
   max-width: 300px;
   max-height: 200px;
 }
 
-ul.service-list li i {
+ul.planets-list li i {
   color: #002F2F;
   padding-right: 10px;
 }
@@ -365,7 +367,7 @@ ul.service-list li i {
   -webkit-transition: all 0.3s;
 }
 
-.visit-portfolio, .visit-portfolio:hover, .visit-portfolio:focus {
+.visit-packages, .visit-packages:hover, .visit-packages:focus {
   height: 50px;
   width: 175px;
   display: inline-block;
@@ -389,7 +391,7 @@ ul.service-list li i {
   margin-bottom: 15px;
 }
 
-.service-item h3 span {
+.planets-item h3 span {
   opacity: 0.7;
   font-size: 75px;
   line-height: 1;
@@ -399,17 +401,17 @@ ul.service-list li i {
   padding-right: 6px;
 }
 
-.service-item h3 {
+.planets-item h3 {
   font-weight: 700;
 }
 
-.service-item p {
+.planets-item p {
   opacity: 0.6;
   color: inherit;
   padding: 10px 0px;
 }
 
-.service-item a {
+.planets-item a {
   color: #FCDAB7;
 }
 
@@ -425,26 +427,26 @@ ul.service-list li i {
   margin: 0 auto 35px;
 }
 
-.portfolio-item {
+.packages-item {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-item figure {
+.packages-item figure {
   margin: 0;
   padding: 0;
   position: relative;
   cursor: pointer;
 }
 
-.portfolio-item figure img {
+.packages-item figure img {
   display: block;
   position: relative;
   z-index: 10;
   margin: -15px 0
 }
 
-.portfolio-item figure figcaption {
+.packages-item figure figcaption {
   display: block;
   position: absolute;
   z-index: 5;
@@ -453,7 +455,7 @@ ul.service-list li i {
   box-sizing: border-box
 }
 
-.portfolio-item figure h2 {
+.packages-item figure h2 {
   font-family: 'Fira Sans', sans-serif;
   color: #fff;
   font-size: 20px;
@@ -461,7 +463,7 @@ ul.service-list li i {
   padding-bottom: 15px;
 }
 
-.portfolio-item figure p {
+.packages-item figure p {
   display: block;
   line-height: 18px;
   margin: 0;
@@ -469,7 +471,7 @@ ul.service-list li i {
   text-align: left
 }
 
-.portfolio-item figure figcaption {
+.packages-item figure figcaption {
   top: 0;
   left: 0;
   width: 100%;
@@ -486,20 +488,20 @@ ul.service-list li i {
   text-align: center;
 }
 
-.portfolio-item figure img {
+.packages-item figure img {
   backface-visibility: hidden;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   transition: all .5s
 }
 
-.portfolio-item figure:hover img, figure.hover img {
+.packages-item figure:hover img, figure.hover img {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg)
 }
 
-.portfolio-item figure:hover figcaption, figure.hover figcaption {
+.packages-item figure:hover figcaption, figure.hover figcaption {
   -webkit-transform: rotateY(0);
   -moz-transform: rotateY(0);
   transform: rotateY(0)
@@ -517,9 +519,16 @@ TESTIMONIAL
   min-height: 390px;
 }
 
-#portfolio {
-  background-color: var(--light-blue);
+#packages {
+  background-color: var(--dark-blue);
   color: #F1FAEE;
+}
+
+.packages-container {
+  background-color: rgba(0, 0, 0, 0.5);  
+  width: 100%;
+  padding: 60px 30px;
+
 }
 
 .bg-testicolor {
@@ -810,10 +819,10 @@ Responsive media queries
 ***********************************/
 
 @media (min-width: 768px) and (max-width: 980px) {
-  .service-item, .blog-sec, .wrap-item, .loction-info {
+  .planets-item, .blog-sec, .wrap-item, .loction-info {
     margin-bottom: 15px;
   }
-  .portfolio-item figure figcaption {
+  .packages-item figure figcaption {
     padding: 55px 30px;
   }
   .padding-right-zero {
@@ -822,7 +831,7 @@ Responsive media queries
 }
 
 @media (min-width: 451px) and (max-width: 767px) {
-  .service-item, .blog-sec, .wrap-item, .loction-info {
+  .planets-item, .blog-sec, .wrap-item, .loction-info {
     margin-bottom: 15px;
   }
 }
@@ -851,28 +860,28 @@ Responsive media queries
   .wrap-item h3 {
     font-size: 18px;
   }
-  .title, .service-title {
+  .title, .planets-title {
     font-size: 28px;
   }
   .sub-title {
     font-size: 15px;
   }
-  .service-item, .blog-sec, .wrap-item, .loction-info {
+  .planets-item, .blog-sec, .wrap-item, .loction-info {
     margin-bottom: 15px;
   }
   .loction-info {
     padding: 0px 15px;
   }
-  .portfolio-item figure figcaption {
+  .packages-item figure figcaption {
     padding: 30px 30px;
   }
   .padding-right-zero {
     padding-right: 15px !important;
   }
-  .portfolio-item figure p {
+  .packages-item figure p {
     font-size: 14px;
   }
-  .portfolio-item figure h2 {
+  .packages-item figure h2 {
     font-size: 18px;
   }
   .testimonial-item ul li blockquote {
