@@ -172,8 +172,9 @@ HEADER
   background: rgba(64, 75, 97, 1);
 }
 
-.logo-dec {
-  color: #FCDAB7;
+.logo {
+border-radius: 10%;
+max-height:100%
 }
 
 .navbar-default .navbar-brand {
@@ -187,10 +188,7 @@ HEADER
 }
 
 .navbar-brand {
-  padding: 0px;
-  font-size: 24px;
-  text-transform: uppercase;
-  padding: 15px 0px;
+  padding: 1px 1px;
   margin-top: 6px;
 }
 
