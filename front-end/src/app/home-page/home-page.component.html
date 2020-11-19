@@ -1,0 +1,138 @@
+<div class="header">
+  <div class="bg-color">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="banner-info text-center">
+            <h1 class="bnr-title">PLAN A TRIP</h1>
+            <h2 class="bnr-sub-title">TO ANOTHER PLANET</h2>
+            <p class="bnr-para"></p>
+            <div class="brn-btn">
+              <a href="#" class="btn btn-download">Find a trip!</a>
+              <a href="#planets" class="btn btn-more">Planets</a>
+              <a href="#packages" class="btn btn-more">Packages</a>
+              <a href="#" class="btn btn-more">Sign-In</a>
+            </div>
+            <div class="overlay-detail">
+              <a href="#packages"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="planets" class="section-padding" style="background-color: black">
+  <div class="container">
+    <div class="row">
+      <app-planet-card
+        *ngFor="let planet of planets"
+        [planet]="planet"
+      ></app-planet-card>
+    </div>
+  </div>
+</section>
+<section id="packages">
+  <div class="container packages-container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="planets-title pad-bt15">Current travel packages</h2>
+        <p class="sub-title pad-bt15">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod<br />tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <hr class="bottom-line" />
+      </div>
+      <div
+        class="col-md-4 col-sm-6 col-xs-12 packages-item padding-right-zero mr-btn-15"
+      >
+        <figure>
+          <img src="assets/img/port01.jpg" class="img-responsive" />
+          <figcaption>
+            <h2>Project For Everyone</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nost.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="col-md-4 col-sm-6 col-xs-12 packages-item padding-right-zero mr-btn-15"
+      >
+        <figure>
+          <img src="assets/img/port02.jpg" class="img-responsive" />
+          <figcaption>
+            <h2>Project For Everyone</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nost.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="col-md-4 col-sm-6 col-xs-12 packages-item padding-right-zero mr-btn-15"
+      >
+        <figure>
+          <img src="assets/img/port03.jpg" class="img-responsive" />
+          <figcaption>
+            <h2>Project For Everyone</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nost.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="col-md-4 col-sm-6 col-xs-12 packages-item padding-right-zero mr-btn-15"
+      >
+        <figure>
+          <img src="assets/img/port04.jpg" class="img-responsive" />
+          <figcaption>
+            <h2>Project For Everyone</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nost.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="col-md-4 col-sm-6 col-xs-12 packages-item padding-right-zero mr-btn-15"
+      >
+        <figure>
+          <img src="assets/img/port05.jpg" class="img-responsive" />
+          <figcaption>
+            <h2>Project For Everyone</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nost.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="col-md-4 col-sm-6 col-xs-12 packages-item padding-right-zero mr-btn-15"
+      >
+        <figure>
+          <img src="assets/img/port06.jpg" class="img-responsive" />
+          <figcaption>
+            <h2>Project For Everyone</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nost.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
