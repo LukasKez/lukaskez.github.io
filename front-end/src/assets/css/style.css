@@ -505,6 +505,10 @@ ul.planets-list li i {
   transform: rotateY(0)
 }
 
+.input-box-scale{
+  width: 25%;
+}
+
 /***********************************
 ************************************
 TESTIMONIAL
