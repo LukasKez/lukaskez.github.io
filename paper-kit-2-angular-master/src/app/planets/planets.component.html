@@ -1,11 +1,65 @@
 <div class="wrapper">
   <div
     class="page-header page-header-xs"
-    style="background-color: #192841"
-  ></div>
-  <div class="section">
-    <div class="container">
-      <p>page content here</p>
+    data-parallax="true"
+    style="background-image: url('./assets/img/main.jpg')"
+  >
+    <div class="filter"></div>
+  </div>
+  <div class="container">
+    <div class="section" id="carousel">
+      <div class="container">
+        <div class="tim-title">
+          <h3>Available planets to explore</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-8 mr-auto ml-auto">
+            <div class="card page-carousel">
+              <ngb-carousel>
+                <ng-template ngbSlide>
+                  <img src="./assets/img/planets/mars-spin.gif" alt="Mars" />
+                  <div class="carousel-caption">
+                    <p>Mars</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <img src="./assets/img/planets/mercury.gif" alt="Mercury" />
+                  <div class="carousel-caption">
+                    <p>Mercury</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <img src="./assets/img/planets/moon-spin.gif" alt="Moon" />
+                  <div class="carousel-caption">
+                    <p>Moon</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <img src="./assets/img/planets/neptune.gif" alt="Neptune" />
+                  <div class="carousel-caption">
+                    <p>Neptune</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <img src="./assets/img/planets/saturn.gif" alt="Saturn" />
+                  <div class="carousel-caption">
+                    <p>Saturn</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <img
+                    src="./assets/img/planets/uranus-spin.gif"
+                    alt="Uranus"
+                  />
+                  <div class="carousel-caption">
+                    <p>Uranus</p>
+                  </div>
+                </ng-template>
+              </ngb-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

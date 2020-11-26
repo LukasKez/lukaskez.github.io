@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -14,31 +15,36 @@ import { ExamplesModule } from './examples/examples.module';
 import { HomeComponent } from './home/home.component';
 import { PlannerComponent } from './planner/planner.component';
 import { PackagesComponent } from './packages/packages.component';
-import { LoginComponent } from './login/login.component';
 import { PlanetsComponent } from './planets/planets.component';
+import { OrdersIndexComponent } from './orders/orders-index/orders-index.component';
+import { OrdersCreateComponent } from './orders/orders-create/orders-create.component';
+import { OrdersModifyComponent } from './orders/orders-modify/orders-modify.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    HomeComponent,
-    PlannerComponent,
-    PackagesComponent,
-    LoginComponent,
-    PlanetsComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    FormsModule,
-    RouterModule,
-    ComponentsModule,
-    ExamplesModule,
-    AppRoutingModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        FooterComponent,
+        HomeComponent,
+        PlannerComponent,
+        PackagesComponent,
+        PlanetsComponent,
+        OrdersIndexComponent,
+        OrdersCreateComponent,
+        OrdersModifyComponent
+    ],
+    imports: [
+        BrowserModule,
+        NgbModule,
+        FormsModule,
+        RouterModule,
+        ComponentsModule,
+        ExamplesModule,
+        AuthModule,
+        AppRoutingModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

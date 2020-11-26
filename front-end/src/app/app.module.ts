@@ -9,6 +9,7 @@ import { PackagesComponent } from './packages/packages.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { PlanetsPageComponent } from './planets-page/planets-page.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { RegisterComponent } from './auth/register/register.component';
         AuthComponent,
         LoginComponent,
         RegisterComponent,
+        PlanetsPageComponent,
     ],
     imports: [
         BrowserModule,

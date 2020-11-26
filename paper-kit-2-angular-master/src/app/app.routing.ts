@@ -5,14 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ComponentsComponent } from './components/components.component';
 import { ProfileComponent } from './examples/profile/profile.component';
-import { SignupComponent } from './examples/signup/signup.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import { LandingComponent } from './examples/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { HomeComponent } from './home/home.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { PlannerComponent } from './planner/planner.component';
 import { PackagesComponent } from './packages/packages.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
+import { OrdersCreateComponent } from './orders/orders-create/orders-create.component';
+import { OrdersModifyComponent } from './orders/orders-modify/orders-modify.component';
+import { OrdersIndexComponent } from './orders/orders-index/orders-index.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -21,6 +24,9 @@ const routes: Routes = [
     { path: 'packages', component: PackagesComponent },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
+    { path: 'orders', component: OrdersIndexComponent },
+    { path: 'orders/edit', component: OrdersModifyComponent },
+    { path: 'orders/create', component: OrdersCreateComponent },
     { path: 'components', component: ComponentsComponent },
     { path: 'user-profile', component: ProfileComponent },
     { path: 'landing', component: LandingComponent },

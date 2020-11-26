@@ -1,0 +1,144 @@
+<div class="wrapper">
+  <div
+    class="page-header page-header-xs"
+    data-parallax="true"
+    style="background-image: url('./assets/img/main.jpg')"
+  >
+    <div class="filter"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tim-title">
+          <h3>Your orders</h3>
+        </div>
+
+        <div class="nav-tabs-navigation">
+          <div class="nav-tabs-wrapper">
+            <ngb-tabset [justify]="'center'">
+              <ngb-tab title="Active">
+                <ng-template ngbTabContent>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">From - To</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Package</th>
+                        <th scope="col">Additional Services</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let id of [1, 2, 3, 4, 5]">
+                        <th scope="row">
+                          {{ id }}
+                        </th>
+                        <td>Earth - Mars</td>
+                        <td>2020/10/10 - 2020/10/15</td>
+                        <td>
+                          <i *ngIf="id % 2 === 0" class="nc-icon nc-check-2"></i
+                          ><i
+                            *ngIf="id % 2 !== 0"
+                            class="nc-icon nc-simple-remove"
+                          ></i>
+                        </td>
+                        <td>
+                          <span class="label label-info">Hotel</span> &nbsp;
+                          <span class="label label-danger">Catering</span>
+                          &nbsp;
+                          <span class="label label-default">Guide</span>
+                        </td>
+                        <td>566,99 <i class="nc-icon nc-atom"></i></td>
+                        <td>
+                          <button
+                            routerLink="orders/edit"
+                            type="button"
+                            class="btn btn-info btn-link btn-sm"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            routerLink="orders/edit"
+                            type="button"
+                            class="btn btn-danger btn-link btn-sm"
+                          >
+                            Cancel
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-template>
+              </ngb-tab>
+              <ngb-tab title="Completed">
+                <ng-template ngbTabContent>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">From - To</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Package</th>
+                        <th scope="col">Additional Services</th>
+                        <th scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let id of [1, 2, 3]">
+                        <th scope="row">{{ id }}</th>
+                        <td>Earth - Mars</td>
+                        <td>2020/10/10 - 2020/10/15</td>
+                        <td>
+                          <i *ngIf="id % 2 === 0" class="nc-icon nc-check-2"></i
+                          ><i
+                            *ngIf="id % 2 !== 0"
+                            class="nc-icon nc-simple-remove"
+                          ></i>
+                        </td>
+                        <td>
+                          <span class="label label-info">Hotel</span> &nbsp;
+                          <span class="label label-danger">Catering</span>
+                          &nbsp;
+                          <span class="label label-default">Guide</span>
+                        </td>
+                        <td>566,99 <i class="nc-icon nc-atom"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-template>
+              </ngb-tab>
+              <ngb-tab title="Canceled">
+                <ng-template ngbTabContent>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">From - To</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Cancellation reason</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let id of [1, 2]">
+                        <th scope="row">{{ id }}</th>
+                        <td>Earth - Mars</td>
+                        <td>2020/10/10 - 2020/10/15</td>
+                        <td>566,99 <i class="nc-icon nc-atom"></i></td>
+                        <td>
+                          <span class="label label-danger">Wrong order</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
