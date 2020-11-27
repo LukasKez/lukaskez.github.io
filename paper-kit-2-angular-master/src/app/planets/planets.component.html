@@ -7,58 +7,111 @@
     <div class="filter"></div>
   </div>
   <div class="container">
-    <div class="section" id="carousel">
-      <div class="container">
-        <div class="tim-title">
-          <h3>Available planets to explore</h3>
-        </div>
-        <div class="row">
-          <div class="col-md-8 mr-auto ml-auto">
-            <div class="card page-carousel">
-              <ngb-carousel>
-                <ng-template ngbSlide>
-                  <img src="./assets/img/planets/mars-spin.gif" alt="Mars" />
-                  <div class="carousel-caption">
-                    <p>Mars</p>
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <img src="./assets/img/planets/mercury.gif" alt="Mercury" />
-                  <div class="carousel-caption">
-                    <p>Mercury</p>
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <img src="./assets/img/planets/moon-spin.gif" alt="Moon" />
-                  <div class="carousel-caption">
-                    <p>Moon</p>
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <img src="./assets/img/planets/neptune.gif" alt="Neptune" />
-                  <div class="carousel-caption">
-                    <p>Neptune</p>
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <img src="./assets/img/planets/saturn.gif" alt="Saturn" />
-                  <div class="carousel-caption">
-                    <p>Saturn</p>
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <img
-                    src="./assets/img/planets/uranus-spin.gif"
-                    alt="Uranus"
-                  />
-                  <div class="carousel-caption">
-                    <p>Uranus</p>
-                  </div>
-                </ng-template>
-              </ngb-carousel>
-            </div>
-          </div>
-        </div>
+    <div class="tim-title">
+      <h3>Available planets to explore</h3>
+    </div>
+    <div class="d-flex flex-row justify-content-around mb-3 planet">
+      <div class="col-sm-3 col-md-3" (click)="open()">
+        <img
+          src="assets/img/planets/earth.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Earth</p>
+      </div>
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/mars.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Mars</p>
+      </div>
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/mercury.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Mercury</p>
+      </div>
+    </div>
+    <div class="d-flex flex-row justify-content-around mb-3">
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/jupiter.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Jupiter</p>
+      </div>
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/uranus.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Uranus</p>
+      </div>
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/moon.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Moon</p>
+      </div>
+    </div>
+    <div class="d-flex flex-row justify-content-around">
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/saturn.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Saturn</p>
+      </div>
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/venus.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Venus</p>
+      </div>
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/pluto.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Pluto</p>
+      </div>
+    </div>
+    <div class="d-flex flex-row justify-content-around">
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/nebula.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Nebula</p>
+      </div>
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/milkyway.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Milky Way</p>
+      </div>
+      <div class="col-sm-3 col-md-3 planet" (click)="open()">
+        <img
+          src="assets/img/planets/neptune.gif"
+          class="img-circle img-no-padding img-responsive"
+          alt="Rounded Image"
+        />
+        <p class="text-center">Neptune</p>
       </div>
     </div>
   </div>
