@@ -23,11 +23,11 @@
         <div class="row text-center mt-4">
           <div class="col-md-12">
             <button
-              routerLink="/planner"
+              (click)="scroll()"
               type="button"
               class="btn btn-primary btn-round btn-lg"
             >
-              Find &nbsp;<i class="nc-icon nc-zoom-split"></i>
+              Browse &nbsp;<i class="nc-icon nc-zoom-split"></i>
             </button>
           </div>
         </div>
@@ -35,3 +35,4 @@
     </div>
   </div>
 </div>
+<app-planets></app-planets>
