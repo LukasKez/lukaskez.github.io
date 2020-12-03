@@ -15,7 +15,7 @@
 
         <div class="nav-tabs-navigation">
           <div class="nav-tabs-wrapper">
-            <ngb-tabset [justify]="'center'">
+            <ngb-tabset [justify]="'center'" #t="ngbTabset">
               <ngb-tab title="Active">
                 <ng-template ngbTabContent>
                   <table class="table">
@@ -60,9 +60,9 @@
                             Edit
                           </button>
                           <button
-                            routerLink="orders/edit"
                             type="button"
                             class="btn btn-danger btn-link btn-sm"
+                            (click)="t.select('canceled')"
                           >
                             Cancel
                           </button>
@@ -109,7 +109,7 @@
                   </table>
                 </ng-template>
               </ngb-tab>
-              <ngb-tab title="Canceled">
+              <ngb-tab title="Canceled" id="canceled">
                 <ng-template ngbTabContent>
                   <table class="table">
                     <thead>
