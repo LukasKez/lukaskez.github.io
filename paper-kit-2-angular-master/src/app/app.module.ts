@@ -5,6 +5,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { AuthModule } from './auth/auth.module';
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -19,6 +22,7 @@ import { PlanetsComponent } from './planets/planets.component';
 import { OrdersIndexComponent } from './orders/orders-index/orders-index.component';
 import { OrdersCreateComponent } from './orders/orders-create/orders-create.component';
 import { OrdersModifyComponent } from './orders/orders-modify/orders-modify.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 
 @NgModule({
@@ -32,7 +36,8 @@ import { OrdersModifyComponent } from './orders/orders-modify/orders-modify.comp
         PlanetsComponent,
         OrdersIndexComponent,
         OrdersCreateComponent,
-        OrdersModifyComponent
+        OrdersModifyComponent,
+        StatisticsComponent,
     ],
     imports: [
         BrowserModule,
@@ -43,6 +48,9 @@ import { OrdersModifyComponent } from './orders/orders-modify/orders-modify.comp
         ExamplesModule,
         AuthModule,
         AppRoutingModule,
+        NgxEchartsModule.forRoot({
+            echarts
+        }),
     ],
     providers: [],
     bootstrap: [AppComponent]

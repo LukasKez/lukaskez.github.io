@@ -16,6 +16,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { OrdersCreateComponent } from './orders/orders-create/orders-create.component';
 import { OrdersModifyComponent } from './orders/orders-modify/orders-modify.component';
 import { OrdersIndexComponent } from './orders/orders-index/orders-index.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -31,6 +33,7 @@ const routes: Routes = [
     { path: 'user-profile', component: ProfileComponent },
     { path: 'landing', component: LandingComponent },
     { path: 'nucleoicons', component: NucleoiconsComponent },
+    { path: 'statistics', component: StatisticsComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
