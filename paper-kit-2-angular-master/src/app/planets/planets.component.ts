@@ -1,16 +1,16 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { NgbModal, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 @Component({
   selector: "app-modal-content",
   template: `
     <div class="modal-header">
-      <h5 class="modal-title text-center">Modal title</h5>
+      <h5 class="modal-title text-center">Amazing planet</h5>
       <button
         type="button"
         class="close"
         aria-label="Close"
-        (click)="activeModal.dismiss('Cross click')"
+        (click)="activeModal.dismiss()"
       >
         <span aria-hidden="true">&times;</span>
       </button>
@@ -31,14 +31,14 @@ import { NgbModal, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
         <button
           type="button"
           class="btn btn-outline-default btn-round"
-          (click)="activeModal.close('Close click')"
+          (click)="redirect()"
         >
           Order
         </button>
         <button
           type="button"
           class="btn btn-outline-danger btn-round"
-          (click)="activeModal.close('Close click')"
+          (click)="activeModal.close()"
         >
           Cancel
         </button>
@@ -49,7 +49,12 @@ import { NgbModal, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 export class NgbdModalContent {
   @Input() name;
 
-  constructor(public activeModal: NgbActiveModal) {}
+  constructor(public activeModal: NgbActiveModal, private router: Router) {}
+
+  redirect(): void {
+    this.activeModal.close();
+    this.router.navigate(["orders", "create"]);
+  }
 }
 
 @Component({

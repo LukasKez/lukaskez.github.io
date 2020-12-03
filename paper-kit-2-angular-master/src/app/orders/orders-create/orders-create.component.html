@@ -7,6 +7,201 @@
     <div class="filter"></div>
   </div>
   <div class="container">
-    <p>page content here</p>
+    <div class="tim-title">
+      <h3>New order</h3>
+    </div>
+    <div class="d-flex flex-row justify-content-around mb-3">
+      <div class="col-lg-12">
+        <h4><strong>Travel</strong></h4>
+        <h5>
+          <span class="label label-success">Earth</span> &nbsp; - &nbsp;
+          <span class="label label-danger">Mars</span> &nbsp; - &nbsp;
+          <span class="label label-success">Earth</span> &nbsp;
+        </h5>
+        <br />
+
+        <h4 class="mb-1"><strong>From - To</strong></h4>
+        <div class="row">
+          <div class="ml-3">
+            <form class="form-inline">
+              <div class="form-group">
+                <div
+                  class="input-group date"
+                  [ngClass]="{ 'input-group-focus': focus === true }"
+                >
+                  <input
+                    class="form-control"
+                    placeholder="yyyy-mm-dd"
+                    name="dp1"
+                    [(ngModel)]="model"
+                    ngbDatepicker
+                    #d1="ngbDatepicker"
+                    (click)="d1.toggle()"
+                    (focus)="focus = true"
+                    (blur)="focus = false"
+                  />
+                  <div class="input-group-append">
+                    <span class="glyphicon glyphicon-calendar input-group-text">
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="ml-3">
+            <form class="form-inline">
+              <div class="form-group">
+                <div
+                  class="input-group date"
+                  [ngClass]="{ 'input-group-focus': focus === true }"
+                >
+                  <input
+                    class="form-control"
+                    placeholder="yyyy-mm-dd"
+                    name="dp2"
+                    [(ngModel)]="model2"
+                    ngbDatepicker
+                    #d2="ngbDatepicker"
+                    (click)="d2.toggle()"
+                    (focus)="focus = true"
+                    (blur)="focus = false"
+                  />
+                  <div class="input-group-append">
+                    <span class="glyphicon glyphicon-calendar input-group-text">
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <div class="tim-title">
+              <h4><strong>People count</strong></h4>
+            </div>
+            <p><strong>Adults</strong></p>
+            <nouislider
+              [(ngModel)]="adults"
+              [connect]="false"
+              [min]="0"
+              [max]="10"
+              [step]="1"
+              [tooltips]="true"
+              class="slider"
+            ></nouislider>
+            <p><strong>Children</strong></p>
+            <nouislider
+              [(ngModel)]="children"
+              [connect]="false"
+              [min]="0"
+              [max]="10"
+              [step]="1"
+              [tooltips]="true"
+              class="slider"
+            ></nouislider>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <div class="tim-title">
+              <h4><strong>Additional services</strong></h4>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" />
+                Hotel
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" />
+                Catering
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" />
+                Transport
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" />
+                Child amenities
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" />
+                Guide
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" />
+                Insurance
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="tim-title">
+              <h4><strong>Main transport</strong></h4>
+            </div>
+            <div class="form-check-radio">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios1"
+                  value="option1"
+                />
+                SpaceShip 3000
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+            <div class="form-check-radio">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios1"
+                  value="option1"
+                />
+                RocketX 5000
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+            <div class="form-check-radio">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios1"
+                  value="option1"
+                />
+                AirCraft Over 9000
+                <span class="form-check-sign"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
