@@ -1,4 +1,4 @@
-import { StatisticsComponent } from './statistics/statistics.component';
+import { StatisticsComponent } from "./statistics/statistics.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
@@ -7,8 +7,8 @@ import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app.routing";
 import { AuthModule } from "./auth/auth.module";
 import { NouisliderModule } from "ng2-nouislider";
-import { NgxEchartsModule } from 'ngx-echarts';
-import * as echarts from 'echarts';
+import { NgxEchartsModule } from "ngx-echarts";
+import * as echarts from "echarts";
 
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
@@ -49,7 +49,7 @@ import { OrdersModifyComponent } from "./orders/orders-modify/orders-modify.comp
     AppRoutingModule,
     NouisliderModule,
     NgxEchartsModule.forRoot({
-        echarts
+      echarts,
     }),
   ],
   providers: [],

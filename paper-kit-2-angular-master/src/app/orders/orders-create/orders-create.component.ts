@@ -8,6 +8,16 @@ import { Component, OnInit } from "@angular/core";
 export class OrdersCreateComponent implements OnInit {
   adults = 0;
   children = 0;
+
+  services = [
+    { name: "Hotel", color: "info" },
+    { name: "Catering", color: "danger" },
+    { name: "Transport", color: "primary" },
+    { name: "Child amenities", color: "success" },
+    { name: "Guide", color: "default" },
+    { name: "Insurance", color: "warning" },
+  ];
+
   constructor() {}
 
   ngOnInit(): void {}
