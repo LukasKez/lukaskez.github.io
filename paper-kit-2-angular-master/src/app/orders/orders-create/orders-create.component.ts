@@ -8,6 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class OrdersCreateComponent implements OnInit {
   adults = 0;
   children = 0;
+  pets = 0;
 
   services = [
     { name: "Hotel", color: "info" },

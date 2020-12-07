@@ -23,6 +23,7 @@ import { PlanetsComponent } from "./planets/planets.component";
 import { OrdersIndexComponent } from "./orders/orders-index/orders-index.component";
 import { OrdersCreateComponent } from "./orders/orders-create/orders-create.component";
 import { OrdersModifyComponent } from "./orders/orders-modify/orders-modify.component";
+import { OrdersCancelComponent } from './orders/orders-cancel/orders-cancel.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { OrdersModifyComponent } from "./orders/orders-modify/orders-modify.comp
     OrdersCreateComponent,
     OrdersModifyComponent,
     StatisticsComponent,
+    OrdersCancelComponent,
   ],
   imports: [
     BrowserModule,

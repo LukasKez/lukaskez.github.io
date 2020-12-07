@@ -94,7 +94,7 @@
               <div class="row">
                 <div class="col-sm-6 col-lg-6">
                   <div class="tim-title">
-                    <h4><strong>People count</strong></h4>
+                    <h4><strong>Passengers count</strong></h4>
                   </div>
                   <p class="mb-2"><strong>Adults</strong></p>
                   <nouislider
@@ -112,6 +112,16 @@
                     [connect]="false"
                     [min]="0"
                     [max]="8"
+                    [step]="1"
+                    [tooltips]="true"
+                    class="slider ml-2"
+                  ></nouislider>
+                  <p class="mb-2"><strong>Pets</strong></p>
+                  <nouislider
+                    [(ngModel)]="pets"
+                    [connect]="false"
+                    [min]="0"
+                    [max]="4"
                     [step]="1"
                     [tooltips]="true"
                     class="slider ml-2"
@@ -270,14 +280,15 @@
                 <h4><strong>From - To</strong></h4>
                 <p>2020-12-14 - 2020-12-20</p>
 
+                <h4><strong>Estimated space travel duration</strong></h4>
+                <p>35 hours</p>
+
                 <h4><strong>People count</strong></h4>
                 <p>2 adults + 1 child</p>
 
                 <h4><strong>Travel preferences</strong></h4>
-                <p>
-                  Main transport: AirCraft Over 9000 | Luggage: Unlimited for
-                  each adult passenger
-                </p>
+                <p>Main transport: AirCraft Over 9000</p>
+                <p>Luggage: Unlimited for each adult passenger</p>
 
                 <h4><strong>Additional services</strong></h4>
                 <p>
@@ -298,10 +309,18 @@
         </ngb-accordion>
 
         <div class="row justify-content-center">
-          <button type="button" class="btn btn-outline-danger btn-round mr-3">
+          <button
+            type="button"
+            class="btn btn-outline-danger btn-round mr-3"
+            routerLink="/planets"
+          >
             Cancel
           </button>
-          <button type="button" class="btn btn-outline-default btn-round">
+          <button
+            type="button"
+            class="btn btn-outline-default btn-round"
+            routerLink="/orders"
+          >
             Place order
           </button>
         </div>

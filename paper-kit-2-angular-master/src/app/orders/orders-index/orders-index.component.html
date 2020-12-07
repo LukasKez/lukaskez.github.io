@@ -56,13 +56,14 @@
                             routerLink="orders/edit"
                             type="button"
                             class="btn btn-info btn-link btn-sm"
+                            routerLink="/orders/edit"
                           >
                             Edit
                           </button>
                           <button
                             type="button"
                             class="btn btn-danger btn-link btn-sm"
-                            (click)="t.select('canceled')"
+                            routerLink="/orders/cancel"
                           >
                             Cancel
                           </button>

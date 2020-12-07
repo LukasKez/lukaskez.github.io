@@ -7,6 +7,238 @@
     <div class="filter"></div>
   </div>
   <div class="container">
-    <p>page content here</p>
+    <div class="tim-title d-flex justify-content-center">
+      <h3>
+        <span class="label label-primary"><strong>Edit order</strong></span>
+      </h3>
+    </div>
+    <div class="d-flex flex-row justify-content-around mb-3">
+      <div class="col-lg-12">
+        <div class="d-flex justify-content-center mb-3">
+          <h5>
+            <span class="label label-success">Earth</span> &nbsp; &mdash; &nbsp;
+            <span class="label label-danger">Mars</span> &nbsp; &mdash; &nbsp;
+            <span class="label label-success">Earth</span> &nbsp;
+          </h5>
+        </div>
+
+        <ngb-accordion
+          #acc="ngbAccordion"
+          closeOthers="true"
+          activeIds="ngb-panel-0"
+        >
+          <ngb-panel title="Travel preferences">
+            <ng-template ngbPanelContent>
+              <div class="row">
+                <div class="col-sm-3 col-lg-3">
+                  <div class="tim-title mt-0">
+                    <h4 class="mt-0"><strong>Main transport</strong></h4>
+                  </div>
+                  <div class="form-check-radio">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="exampleRadios"
+                        id="exampleRadios1"
+                        value="option1"
+                      />
+                      SpaceShip 3000
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                  <div class="form-check-radio">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="exampleRadios"
+                        id="exampleRadios1"
+                        value="option1"
+                      />
+                      RocketX 5000
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                  <div class="form-check-radio">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="exampleRadios"
+                        id="exampleRadios1"
+                        value="option1"
+                        checked=""
+                      />
+                      AirCraft Over 9000
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-9 col-lg-9">
+                  <div class="tim-title mt-0">
+                    <h4 class="mt-0"><strong>Luggage</strong></h4>
+                  </div>
+                  <div class="form-check-radio">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="exampleRadios2"
+                        id="exampleRadios2"
+                        value="option2"
+                      />
+                      <span class="form-check-sign"></span>
+                      Hand bag (under 15kg) for each adult passenger
+                      <span class="label label-success">Free</span>
+                    </label>
+                  </div>
+                  <div class="form-check-radio">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="exampleRadios2"
+                        id="exampleRadios2"
+                        value="option2"
+                        checked=""
+                      />
+                      <span class="form-check-sign"></span>
+                      Hand bag + Additional bag (under 25kg) for each adult
+                      passenger
+                      <span class="label label-danger"
+                        >25 <i class="nc-icon nc-atom"></i
+                      ></span>
+                    </label>
+                  </div>
+                  <div class="form-check-radio">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="exampleRadios2"
+                        id="exampleRadios2"
+                        value="option2"
+                      />
+                      <span class="form-check-sign"></span>
+                      Unlimited for each adult passenger
+                      <span class="label label-danger"
+                        >75 <i class="nc-icon nc-atom"></i
+                      ></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-panel>
+          <ngb-panel title="Additional services">
+            <ng-template ngbPanelContent>
+              <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Service</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let service of services">
+                        <td>
+                          <div
+                            class="form-check d-flex justify-content-center align-content-center"
+                          >
+                            <label class="form-check-label">
+                              <input
+                                *ngIf="
+                                  service.name !== 'Hotel' ||
+                                  service.name !== 'Guide' ||
+                                  service.name !== 'Catering'
+                                "
+                                class="form-check-input"
+                                type="checkbox"
+                                value="" />
+                              <input
+                                *ngIf="
+                                  service.name === 'Hotel' ||
+                                  service.name === 'Guide' ||
+                                  service.name === 'Catering'
+                                "
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                checked="" />
+                              <span class="form-check-sign"></span
+                            ></label>
+                          </div>
+                        </td>
+                        <th scope="row">
+                          <span class="label label-{{ service.color }}">{{
+                            service.name
+                          }}</span>
+                        </th>
+                        <td>Amazing description lorem ipsum 123</td>
+                        <td>566,99 <i class="nc-icon nc-atom"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-panel>
+          <ngb-panel title="Summary">
+            <ng-template ngbPanelContent>
+              <div class="col-sm-12 col-lg-12">
+                <h4><strong>From - To</strong></h4>
+                <p>2020-12-14 - 2020-12-20</p>
+
+                <h4><strong>Estimated space travel duration</strong></h4>
+                <p>35 hours</p>
+
+                <h4><strong>People count</strong></h4>
+                <p>2 adults + 1 child</p>
+
+                <h4><strong>Travel preferences</strong></h4>
+                <p>Main transport: AirCraft Over 9000</p>
+                <p>Luggage: Unlimited for each adult passenger</p>
+
+                <h4><strong>Additional services</strong></h4>
+                <p>
+                  <span class="label label-info">Hotel</span> &nbsp;
+                  <span class="label label-danger">Catering</span>
+                  &nbsp;
+                  <span class="label label-default">Guide</span>
+                </p>
+
+                <h4>
+                  <strong>Order total: 2999.25</strong> &nbsp;<i
+                    class="nc-icon nc-atom"
+                  ></i>
+                </h4>
+              </div>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+
+        <div class="row justify-content-center">
+          <button
+            type="button"
+            class="btn btn-outline-danger btn-round mr-3"
+            routerLink="/orders/cancel"
+          >
+            Cancel order
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-default btn-round"
+            routerLink="/orders"
+          >
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
