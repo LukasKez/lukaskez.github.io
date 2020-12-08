@@ -18,6 +18,7 @@ import { OrdersModifyComponent } from "./orders/orders-modify/orders-modify.comp
 import { OrdersIndexComponent } from "./orders/orders-index/orders-index.component";
 import { StatisticsComponent } from "./statistics/statistics.component";
 import { OrdersCancelComponent } from "./orders/orders-cancel/orders-cancel.component";
+import { BillingComponent } from "./billing/billing.component";
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: "orders/edit", component: OrdersModifyComponent },
   { path: "orders/create", component: OrdersCreateComponent },
   { path: "orders/cancel", component: OrdersCancelComponent },
+  { path: "billing", component: BillingComponent },
   { path: "components", component: ComponentsComponent },
   { path: "user-profile", component: ProfileComponent },
   { path: "landing", component: LandingComponent },

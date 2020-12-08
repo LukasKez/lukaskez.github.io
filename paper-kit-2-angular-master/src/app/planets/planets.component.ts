@@ -5,7 +5,7 @@ import { NgbModal, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-modal-content",
   template: `
     <div class="modal-header">
-      <h5 class="modal-title text-center">Amazing planet</h5>
+      <h5 class="modal-title text-center">{{ name }}</h5>
       <button
         type="button"
         class="close"
@@ -16,15 +16,15 @@ import { NgbModal, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
       </button>
     </div>
     <div class="modal-body">
-      Far far away, behind the word mountains, far from the countries Vokalia
-      and Consonantia, there live the blind texts. Separated they live in
-      Bookmarksgrove right at the coast of the Semantics, a large language
-      ocean. A small river named Duden flows by their place and supplies it with
-      the necessary regelialia. It is a paradisematic country, in which roasted
-      parts of sentences fly into your mouth. Even the all-powerful Pointing has
-      no control about the blind texts it is an almost unorthographic life One
-      day however a small line of blind text by the name of Lorem Ipsum decided
-      to leave for the far World of Grammar.
+      <h5><strong>Average temperature:</strong> 55 &#8451;</h5>
+      <h5><strong>Current season:</strong> Summer</h5>
+      <h5><strong>Time duration (from Earth):</strong> 35 hrs</h5>
+      <h5 class="mb-1"><strong>Description:</strong></h5>
+      <p>
+        Far far away, behind the red mountains, far from the countries Vokalia
+        and Consonantia, there live the blind aliens. It is a paradisematic
+        planet, in which roasted bugs fly into your mouth.
+      </p>
     </div>
     <div class="modal-footer">
       <div class="d-flex flex-row justify-content-end">
@@ -75,8 +75,8 @@ export class PlanetsComponent implements OnInit {
     );
   }
 
-  open() {
+  open(name: string) {
     const modalRef = this.modalService.open(NgbdModalContent);
-    modalRef.componentInstance.name = "Planet";
+    modalRef.componentInstance.name = name;
   }
 }

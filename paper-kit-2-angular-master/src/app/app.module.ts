@@ -24,6 +24,7 @@ import { OrdersIndexComponent } from "./orders/orders-index/orders-index.compone
 import { OrdersCreateComponent } from "./orders/orders-create/orders-create.component";
 import { OrdersModifyComponent } from "./orders/orders-modify/orders-modify.component";
 import { OrdersCancelComponent } from './orders/orders-cancel/orders-cancel.component';
+import { BillingComponent } from './billing/billing.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { OrdersCancelComponent } from './orders/orders-cancel/orders-cancel.comp
     OrdersModifyComponent,
     StatisticsComponent,
     OrdersCancelComponent,
+    BillingComponent,
   ],
   imports: [
     BrowserModule,

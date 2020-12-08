@@ -14,7 +14,12 @@ export class OrdersCancelComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.refundOptions =
+      +JSON.parse(localStorage.getItem("refundable")) === 1
+        ? "refundable"
+        : "nonrefundable";
+  }
 
   setValue(id: number): void {
     switch (id) {
