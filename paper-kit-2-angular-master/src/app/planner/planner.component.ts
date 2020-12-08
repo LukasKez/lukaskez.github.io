@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlannerComponent implements OnInit {
 
+  alienBelief = 50;
+
   constructor() { }
 
   ngOnInit(): void {
