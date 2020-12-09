@@ -1,0 +1,18 @@
+div.author {
+  margin-top: -31px !important;
+}
+
+.img-details img {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.img-details .author {
+  width: unset;
+  margin-left: 0;
+  justify-content: space-evenly;
+}
+
+.img-rounded.img-responsive:hover {
+  cursor: pointer;
+}

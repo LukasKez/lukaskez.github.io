@@ -1,21 +1,26 @@
 <div class="wrapper">
-  <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/main.jpg')">
+  <div
+    class="page-header page-header-xs"
+    data-parallax="true"
+    style="background-image: url('./assets/img/main.jpg')"
+  >
     <div class="filter"></div>
   </div>
-  <div class="container my-5">
+  <div *ngIf="!displayResults" class="container my-5">
     <div class="card">
-      <div class="card-title">
-        <strong>Travel Planner, powered by AI</strong>
+      <div class="card-title ml-3 mt-3 mb-0 text-center">
+        <h5><strong>Travel Planner, powered by AI</strong></h5>
       </div>
       <div class="card-body">
-        <p>Welcome to the most inteligent and smartest AI travel planner! Don't know which destination to choose 
-          from the vast variety that we offer? Do not worry! Just fill out this questionaire (powered by AI) below and you will get a
-           suggestion of the most fit planet that you should visit!
-          <br><br>
-          P.S. <strong>Powered by AI</strong>
-          <br><br><br>
-          BTW, did we mention that this questionaire is smarter than you and <strong>Powered by AI</strong>?
-          <br><br>
+        <p>
+          Welcome to the most inteligent and smartest AI travel planner! Don't
+          know which destination to choose from the vast variety that we offer?
+          Do not worry! Just fill out this questionaire (powered by AI) below
+          and you will get a suggestion of the most fit planet that you should
+          visit! <br /><br />
+          P.S. <strong>Powered by AI</strong> <br /><br /><br />
+          BTW, did we mention that this questionaire is smarter than you and
+          <strong>Powered by AI</strong>? <br /><br />
           LET'S START!
         </p>
       </div>
@@ -26,66 +31,70 @@
           <strong>Prefered travel duration</strong>
         </h4>
       </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-              />
-              Up to 24 hours
-              <span class="form-check-sign"></span>
-            </label>
-          </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="exampleRadios1"
+              value="option1"
+              (click)="updateUserOptions(1)"
+            />
+            Up to 24 hours
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-              />
-              Up to 1 month
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="exampleRadios1"
+              value="option1"
+              (click)="updateUserOptions(2)"
+            />
+            Up to 1 month
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-              />
-              Over 9000
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="exampleRadios1"
+              value="option1"
+              (click)="updateUserOptions(3)"
+            />
+            Over 9000
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-              />
-              I don't care
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="exampleRadios1"
+              value="option1"
+              (click)="updateUserOptions(4)"
+            />
+            I don't care
+            <span class="form-check-sign"></span>
+          </label>
         </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
@@ -93,66 +102,70 @@
           <strong>Prefered weather season</strong>
         </h4>
       </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios2"
-                id="exampleRadios2"
-                value="option2"
-              />
-              Summer
-              <span class="form-check-sign"></span>
-            </label>
-          </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios2"
+              id="exampleRadios2"
+              value="option2"
+              (click)="updateUserOptions(5)"
+            />
+            Summer
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios2"
-                id="exampleRadios2"
-                value="option2"
-              />
-              Winter
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios2"
+              id="exampleRadios2"
+              value="option2"
+              (click)="updateUserOptions(6)"
+            />
+            Winter
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios2"
-                id="exampleRadios2"
-                value="option2"
-              />
-              Autumn
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios2"
+              id="exampleRadios2"
+              value="option2"
+              (click)="updateUserOptions(7)"
+            />
+            Autumn
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios2"
-                id="exampleRadios2"
-                value="option2"
-              />
-              Spring
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios2"
+              id="exampleRadios2"
+              value="option2"
+              (click)="updateUserOptions(5)"
+            />
+            Spring
+            <span class="form-check-sign"></span>
+          </label>
         </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
@@ -160,192 +173,200 @@
           <strong>Prefered free time activity</strong>
         </h4>
       </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios3"
-                id="exampleRadios3"
-                value="option3"
-              />
-              Gaming
-              <span class="form-check-sign"></span>
-            </label>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios3"
-                id="exampleRadios3"
-                value="option3"
-              />
-              Sleeping
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios3"
-                id="exampleRadios3"
-                value="option3"
-              />
-              Free time?
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="form-check-radio">
-            <label class="form-check-label">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios3"
-                id="exampleRadios3"
-                value="option3"
-              />
-              I don't care
-              <span class="form-check-sign"></span>
-            </label>
-          </div>  
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios3"
+              id="exampleRadios3"
+              value="option3"
+              (click)="updateUserOptions(7)"
+            />
+            Gaming
+            <span class="form-check-sign"></span>
+          </label>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-          <h4 class="mt-5 mb-3">
-            <strong>Favourite food</strong>
-          </h4>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios3"
+              id="exampleRadios3"
+              value="option3"
+              (click)="updateUserOptions(6)"
+            />
+            Sleeping
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="form-check-radio">
-              <label class="form-check-label">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios4"
-                  id="exampleRadios4"
-                  value="option4"
-                />
-                Pizza
-                <span class="form-check-sign"></span>
-              </label>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="form-check-radio">
-              <label class="form-check-label">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios4"
-                  id="exampleRadios4"
-                  value="option4"
-                />
-                Pizza
-                <span class="form-check-sign"></span>
-              </label>
-            </div>  
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="form-check-radio">
-              <label class="form-check-label">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios4"
-                  id="exampleRadios4"
-                  value="option4"
-                />
-                Pizza
-                <span class="form-check-sign"></span>
-              </label>
-            </div>  
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="form-check-radio">
-              <label class="form-check-label">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios4"
-                  id="exampleRadios4"
-                  value="option4"
-                />
-                Pizza
-                <span class="form-check-sign"></span>
-              </label>
-            </div>  
-          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios3"
+              id="exampleRadios3"
+              value="option3"
+              (click)="updateUserOptions(5)"
+            />
+            Free time?
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <h4 class="mt-5 mb-3">
-              <strong>How much do you believe in aliens?</strong>
-            </h4>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <p class="mb-2"><strong>0 - 100</strong></p>
-            <nouislider
-              [(ngModel)]="alienBelief"
-              [connect]="false"
-              [min]="0"
-              [max]="100"
-              [step]="1"
-              [tooltips]="true"
-              class="slider"
-            ></nouislider>
-          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios3"
+              id="exampleRadios3"
+              value="option3"
+              (click)="updateUserOptions(4)"
+            />
+            I don't care
+            <span class="form-check-sign"></span>
+          </label>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <h4 class="mt-5 mb-3">
-              <strong>Which way do you hang your toilet paper roll?</strong>
-            </h4>
-          </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="form-check-radio">
-                <label class="form-check-label">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="exampleRadios5"
-                    id="exampleRadios5"
-                    value="option5"
-                  />
-                  Over, bruh
-                  <span class="form-check-sign"></span>
-                </label>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="form-check-radio">
-                <label class="form-check-label">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="exampleRadios5"
-                    id="exampleRadios5"
-                    value="option5"
-                  />
-                  I am insane and I hang it under
-                  <span class="form-check-sign"></span>
-                </label>
-              </div>  
-            </div>
-          </div>
-          
-
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <h4 class="mt-5 mb-3">
+          <strong>Favourite food</strong>
+        </h4>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios4"
+              id="exampleRadios4"
+              value="option4"
+              (click)="updateUserOptions(3)"
+            />
+            Pizza
+            <span class="form-check-sign"></span>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios4"
+              id="exampleRadios4"
+              value="option4"
+              (click)="updateUserOptions(2)"
+            />
+            Pizza
+            <span class="form-check-sign"></span>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios4"
+              id="exampleRadios4"
+              value="option4"
+              (click)="updateUserOptions(1)"
+            />
+            Pizza
+            <span class="form-check-sign"></span>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios4"
+              id="exampleRadios4"
+              value="option4"
+              (click)="updateUserOptions(1)"
+            />
+            Pizza
+            <span class="form-check-sign"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <h4 class="mt-5 mb-3">
+          <strong>How much do you believe in aliens?</strong>
+        </h4>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <p class="mb-2"><strong>0 - 100</strong></p>
+        <nouislider
+          [(ngModel)]="alienBelief"
+          [connect]="false"
+          [min]="0"
+          [max]="100"
+          [step]="1"
+          [tooltips]="true"
+          class="slider"
+        ></nouislider>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <h4 class="mt-5 mb-3">
+          <strong>Which way do you hang your toilet paper roll?</strong>
+        </h4>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios5"
+              id="exampleRadios5"
+              value="option5"
+              (click)="updateUserOptions(1)"
+            />
+            Over, bruh
+            <span class="form-check-sign"></span>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-check-radio">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios5"
+              id="exampleRadios5"
+              value="option5"
+              (click)="updateUserOptions(0)"
+            />
+            I am insane and I hang it under
+            <span class="form-check-sign"></span>
+          </label>
+        </div>
+      </div>
+    </div>
 
     <div class="row justify-content-center mt-5">
       <button
@@ -358,11 +379,250 @@
       <button
         type="button"
         class="btn btn-outline-default btn-round"
-        routerLink="#"
+        (click)="pickRandomPackage()"
       >
         Submit
       </button>
     </div>
   </div>
-</div>
 
+  <div *ngIf="displayResults" class="container">
+    <div class="tim-title text-center mb-1">
+      <h3><strong>AI picked this travel package for you!</strong></h3>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mb-3 row">
+      <div *ngIf="packageNumber === 0" class="col-sm-6 col-md-6 col-lg-6">
+        <h4 class="mb-1 text-center">Package 1</h4>
+        <img
+          src="assets/img/planets/packages/planet10.jpg"
+          class="img-rounded img-responsive"
+          alt="Rounded Image"
+          (click)="open('Mars')"
+        />
+        <div class="img-details">
+          <div class="author d-flex">
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/mars-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+          </div>
+          <p>To the Mars</p>
+        </div>
+      </div>
+      <div *ngIf="packageNumber === 1" class="col-sm-6 col-md-6 col-lg-6">
+        <h4 class="mb-1 text-center">Package 2</h4>
+        <img
+          src="assets/img/planets/packages/planet2.jpg"
+          class="img-rounded img-responsive"
+          alt="Rounded Image"
+          (click)="open('Neptune')"
+        />
+        <div class="img-details">
+          <div class="author d-flex">
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/neptune-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+          </div>
+          <p>To the Neptune</p>
+        </div>
+      </div>
+      <div *ngIf="packageNumber === 2" class="col-sm-6 col-md-6 col-lg-6">
+        <h4 class="mb-1 text-center">Package 3</h4>
+        <img
+          src="assets/img/planets/packages/planet6.jpg"
+          class="img-rounded img-responsive"
+          alt="Rounded Image"
+          (click)="open('Milky Way')"
+        />
+        <div class="img-details">
+          <div class="author d-flex">
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/milkyway-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+          </div>
+          <p>To the Milky Way</p>
+        </div>
+      </div>
+      <div *ngIf="packageNumber === 3" class="col-sm-6 col-md-6 col-lg-6">
+        <h4 class="mb-1 text-center">Package 4</h4>
+        <img
+          src="assets/img/planets/packages/planet4.jpg"
+          class="img-rounded img-responsive"
+          alt="Rounded Image"
+          (click)="open('Oister')"
+        />
+        <div class="img-details">
+          <div class="author d-flex">
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/oister-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+          </div>
+          <p>To the Oister</p>
+        </div>
+      </div>
+      <div *ngIf="packageNumber === 4" class="col-sm-6 col-md-6 col-lg-6">
+        <h4 class="mb-1 text-center">Package 5</h4>
+        <img
+          src="assets/img/planets/packages/planet9.jpg"
+          class="img-rounded img-responsive"
+          alt="Rounded Image"
+          (click)="open('Mercury')"
+        />
+        <div class="img-details">
+          <div class="author d-flex">
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/mercury-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+          </div>
+          <p>To the Mercury</p>
+        </div>
+      </div>
+      <div *ngIf="packageNumber === 5" class="col-sm-6 col-md-6 col-lg-6">
+        <h4 class="mb-1 text-center">Package 6</h4>
+        <img
+          src="assets/img/planets/packages/planet1.jpg"
+          class="img-rounded img-responsive"
+          alt="Rounded Image"
+          (click)="open('Carina')"
+        />
+        <div class="img-details">
+          <div class="author d-flex">
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/carina-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+          </div>
+          <p>To the Carina</p>
+        </div>
+      </div>
+      <div *ngIf="packageNumber === 6" class="col-sm-6 col-md-6 col-lg-6">
+        <h4 class="mb-1 text-center">Package 7</h4>
+        <img
+          src="assets/img/planets/packages/planet7.jpg"
+          class="img-rounded img-responsive"
+          alt="Rounded Image"
+          (click)="open('Venus')"
+        />
+        <div class="img-details">
+          <div class="author d-flex">
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/venus-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+          </div>
+          <p>To the Venus</p>
+        </div>
+      </div>
+      <div *ngIf="packageNumber === 7" class="col-sm-6 col-md-6 col-lg-6">
+        <h4 class="mb-1 text-center">Package 8</h4>
+        <img
+          src="assets/img/planets/packages/planet5.jpg"
+          class="img-rounded img-responsive"
+          alt="Rounded Image"
+          (click)="open('Nebula')"
+        />
+        <div class="img-details">
+          <div class="author d-flex">
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/nebula-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+            <img
+              src="assets/img/planets/static/earth-0.png"
+              alt="Circle Image"
+              class="img-circle img-no-padding img-responsive"
+            />
+          </div>
+          <p>To the Nebula</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
