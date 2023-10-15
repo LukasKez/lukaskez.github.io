@@ -29,6 +29,10 @@ jobs:
         run : pnpm run build
         shell: bash
 
+      - name: Setup git user for deployment
+        run : git config user.name github-actions && git config user.email github-actions@github.com
+        shell: bash
+
       - name: Deploy application to GitHub Pages
         run : pnpm run deploy
         shell: bash
