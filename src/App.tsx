@@ -13,7 +13,7 @@ function App() {
         <Card>
           <CardContent className="pt-4 flex flex-wrap place-content-center gap-3">
             <Button onClick={() => setCount((count) => count + 1)}>
-              count is {count}
+              Count: {count}
             </Button>
 
             <ShareModal />
