@@ -30,7 +30,9 @@ jobs:
         shell: bash
 
       - name: Setup git user for deployment
-        run : git config user.name github-actions && git config user.email github-actions@github.com
+        run : |
+          git config user.name 'GitHub deployer'
+          git config user.email 'LukasKez@users.noreply.github.com'
         shell: bash
 
       - name: Deploy application to GitHub Pages
