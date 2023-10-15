@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ssh-key: ${{secrets.SSH_KEY}}
 
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -36,5 +38,5 @@ jobs:
         shell: bash
 
       - name: Deploy application to GitHub Pages
-        run : pnpm run deploy -u ${{ secrets.GITHUB_TOKEN }}
+        run : pnpm run deploy
         shell: bash
