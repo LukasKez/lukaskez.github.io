@@ -1,18 +1,25 @@
 import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { ShareModal } from '@/components/share-modal'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <div className='container mx-auto'>
-      <h1 className='text-3xl underline'>Vite + React</h1>
-      <div className="card">
-        <button className='transition-colors bg-blue-500 hover:bg-blue-700 text-white font-bold rounded px-4 py-2 ' onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <div className='container mx-auto space-y-6'>
+        <h1 className='text-3xl underline'>Vite + React</h1>
+        <Card>
+          <CardContent className="pt-4 flex flex-wrap place-content-center gap-3">
+            <Button onClick={() => setCount((count) => count + 1)}>
+              count is {count}
+            </Button>
+
+            <ShareModal />
+          </CardContent>
+        </Card>
       </div>
-    </div>
     </>
   )
 }
